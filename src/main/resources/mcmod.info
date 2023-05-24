@@ -1,0 +1,16 @@
+[
+{
+  "modid": "bwcmpTweaks",
+  "name": "Bwcmp Tweaks",
+  "description": "Tweaks for Better With Chemistry modpack.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Mertoalex", "19atlas"],
+  "credits": "idk",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
