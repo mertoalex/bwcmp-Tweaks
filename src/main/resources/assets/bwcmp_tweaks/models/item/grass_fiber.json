@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "bwcmp_tweaks:items/grass_fiber"
+	}
+}

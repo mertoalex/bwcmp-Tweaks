@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"FR",
+		"S "
+	],
+	"key": {
+		"F": {
+			"item": "bwcmp_tweaks:grass_fiber"
+		},
+		"R": {
+			"type": "forge:ore_dict",
+            "ore": "rock"
+		},
+		"S": {
+			"type": "forge:ore_dict",
+            "ore": "stickWood"
+		}
+	},
+	"result": {
+		"item": "bwcmp_tweaks:primitive_axe"
+	}
+}

@@ -13,9 +13,9 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.12.2-0.1'
-group = 'io.mertoalex.bwcmpTweaks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'bwcmpTweaks'
+version = '1.12.2-0.2'
+group = 'io.mertoalex.bwcmp_tweaks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'bwcmp_tweaks'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -113,4 +113,8 @@ publishing {
             url "file:///${project.projectDir}/mcmodsrepo"
         }
     }
+}
+
+sourceSets {
+    main { output.resourcesDir = output.classesDir }
 }
