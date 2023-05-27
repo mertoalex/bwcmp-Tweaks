@@ -5,6 +5,8 @@ import io.mertoalex.bwcmp_tweaks.proxy.CommonProxy;
 import io.mertoalex.bwcmp_tweaks.event.ForgeEvents;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,7 +24,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class bwcmpTweaks {
     public static final String MODID = "bwcmp_tweaks";
     public static final String NAME = "Bwcmp Tweaks";
-    public static final String VERSION = "0.2.1";
+    public static final String VERSION = "0.2.2";
 
 	public static final Logger Logger = LogManager.getLogger(bwcmpTweaks.MODID);
 
@@ -33,7 +35,6 @@ public class bwcmpTweaks {
 
 	@EventHandler
     public void init(FMLInitializationEvent event) {
-        // some example code
         Logger.info("[*] bwcmpTweakes inited!");
 	}
 
