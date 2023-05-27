@@ -34,12 +34,16 @@ public class ForgeEvents {
 		bwcmpTweaks.Logger.info(event.getState().getBlock().toString());*/
 		if(event.getState().getBlock().toString().toLowerCase().contains("tallgrass")) {
 			//bwcmpTweaks.Logger.info("Hi from inside GRASS.");
-			ItemStack stack = event.getHarvester().getHeldItemMainhand();
-			//bwcmpTweaks.Logger.info("[*] " + stack.getItem());
-			if ((stack.getItem() instanceof ItemSword)) {
-				event.setDropChance(0.35f);
-				event.getDrops().add(new ItemStack(Item.getByNameOrId("bwcmp_tweaks:grass_fiber")));
-				stack.damageItem(1, event.getHarvester());
+			try {
+					ItemStack stack = event.getHarvester().getHeldItemMainhand();
+				//bwcmpTweaks.Logger.info("[*] " + stack.getItem());
+				if ((stack.getItem() instanceof ItemSword)) {
+					event.setDropChance(0.35f);
+					event.getDrops().add(new ItemStack(Item.getByNameOrId("bwcmp_tweaks:grass_fiber")));
+					stack.damageItem(1, event.getHarvester());
+				}
+			} catch (NullPointerException e) {
+				bwcmpTweaks.Logger.info(e.toString());
 			}
 		}
 	}
@@ -47,11 +51,15 @@ public class ForgeEvents {
 	@SubscribeEvent
 	public static void onHarverstLeave(BlockEvent.HarvestDropsEvent event) {
 		if(event.getState().getBlock().toString().toLowerCase().contains("leave")) {
-			ItemStack stack = event.getHarvester().getHeldItemMainhand();
-			//bwcmpTweaks.Logger.info("[*] " + stack.getItem());
-			if ((stack.getItem() instanceof ItemSword)) {
-				event.getDrops().add(new ItemStack(Item.getByNameOrId("minecraft:stick")));
-				stack.damageItem(1, event.getHarvester());
+			try {
+				ItemStack stack = event.getHarvester().getHeldItemMainhand();
+				//bwcmpTweaks.Logger.info("[*] " + stack.getItem());
+				if ((stack.getItem() instanceof ItemSword)) {
+					event.getDrops().add(new ItemStack(Item.getByNameOrId("minecraft:stick")));
+					stack.damageItem(1, event.getHarvester());
+				}
+			} catch (NullPointerException e) {
+				bwcmpTweaks.Logger.info(e.toString());
 			}
 		}
 	}

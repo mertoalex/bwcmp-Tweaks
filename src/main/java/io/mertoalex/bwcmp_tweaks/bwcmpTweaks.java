@@ -22,7 +22,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class bwcmpTweaks {
     public static final String MODID = "bwcmp_tweaks";
     public static final String NAME = "Bwcmp Tweaks";
-    public static final String VERSION = "0.2";
+    public static final String VERSION = "0.2.1";
 
 	public static final Logger Logger = LogManager.getLogger(bwcmpTweaks.MODID);
 
