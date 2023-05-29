@@ -1,0 +1,6 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "bwcmp_tweaks:items/primitive_pickaxe"
+	}
+}

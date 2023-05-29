@@ -31,7 +31,8 @@ public class ForgeEvents {
 
 	@SubscribeEvent
 	public static void onHarverstBlock(BlockEvent.HarvestDropsEvent event) {
-		if(event.getState().getBlock().toString().toLowerCase().contains("tallgrass")) {
+		String blockname = event.getState().getBlock().toString().toLowerCase();
+		if(blockname.contains("tallgrass") || blockname.contains("leave")) {
 			event.getDrops().add(new ItemStack(ModItems.grassFiber));
 			event.setDropChance(0f);
 			try {

@@ -1,10 +1,8 @@
 package io.mertoalex.bwcmp_tweaks.item.tool;
 
 import io.mertoalex.bwcmp_tweaks.bwcmpTweaks;
-//import net.minecraft.item.Item;
 
 public class ItemAxe extends net.minecraft.item.ItemAxe {
-
 	private String name;
 
 	public ItemAxe(ToolMaterial material, String name) {
